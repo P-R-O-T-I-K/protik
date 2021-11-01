@@ -56,13 +56,8 @@
 
     <!-- Home Section goes here -->
     <section class="home" id="home">
-      <img
-        src="css/images/super-removebg-preview.png"
-        alt=""
-        class="superman"
-      />
       <div class="content">
-        <div class="contentBx" class="typing-animation">
+        <div class="contentBx container typing-animation">
           <h4>Hello,</h4>
           <h2>I'm Protik Kumar Das</h2>
           <h3>
@@ -74,26 +69,34 @@
             things. You can check it out in my GitHub profile.
           </p>
           <a href="https://github.com/P-R-O-T-I-K">Check Out</a>
+          <img
+            src="css/images/super-removebg-preview.png"
+            alt="Superman"
+            class="superman"
+          />
+          <span class="superman-circle"></span>
         </div>
       </div>
       <div class="social-link">
-        <ul>
-          <li>
-            <a href="https://facebook.com" class="fb"
-              ><i><ion-icon name="logo-facebook"></ion-icon></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://twitter.com"
-              ><i><ion-icon name="logo-twitter"></ion-icon></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://instgram.com"
-              ><i><ion-icon name="logo-instagram"></ion-icon></i
-            ></a>
-          </li>
-        </ul>
+        <div class="container">
+          <ul class="position-relative">
+            <li>
+              <a href="https://facebook.com" class="fb"
+                ><i><ion-icon name="logo-facebook"></ion-icon></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com"
+                ><i><ion-icon name="logo-twitter"></ion-icon></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://instgram.com"
+                ><i><ion-icon name="logo-instagram"></ion-icon></i
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -222,18 +225,16 @@
           </li>
         </ul>
         <ul class="menu">
-          <li><a href="#">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Info</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="https://github.com/P-R-O-T-I-K">Projects</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <p>&copy;2021 Protik Kumar Das | All Rights Reserved</p>
       </footer>
     </section>
 
-    <!-- Jquery needed -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -244,9 +245,7 @@
     ></script>
     <script src="./js/node_modules/typed.js/lib/typed.js"></script>
     <script src="./js/node_modules/typed.js/lib/typed.min.js"></script>
-    <script src="./js/node_modules/typed.js/lib/typed.min.js.map"></script>
     <script src="js/typingAnimation.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/scrollbar.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

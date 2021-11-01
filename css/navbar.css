@@ -7,6 +7,7 @@
   line-height: 65px;
   text-align: center;
   z-index: 20000;
+  top: 0;
 }
 
 .nav div.logo {
@@ -52,6 +53,8 @@
   color: #fff;
   line-height: 65px;
   font-size: 1.5rem;
+  font-family: monospace;
+  font-size: 20px;
 }
 
 .nav div.main_list ul li a:hover {
@@ -84,7 +87,10 @@
     margin-left: 15px;
   }
   .nav div.main_list {
-    width: 100%;
+    width: 90vw;
+    position: fixed;
+    right: 5vw;
+    top: 100px;
     height: 0;
     overflow: hidden;
   }
@@ -110,7 +116,7 @@
   .nav div.main_list ul li a {
     text-align: center;
     width: 100%;
-    font-size: 3rem;
+    font-size: 4vw;
     padding: 20px;
   }
   .nav div.media_button {

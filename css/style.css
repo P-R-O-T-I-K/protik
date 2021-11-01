@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
 * {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  font-family: -apple-system, BlinkMacSystemFont, monospace, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+html, body {
+  background-color: #091921 !important;
+}
+
 /* Animated ScollBar styling */
 ::-webkit-scrollbar {
   width: 0;
@@ -62,7 +67,7 @@
 .home {
   background: #21283a;
   position: relative;
-  padding: 0 100px;
+  padding: 0 30px;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -70,18 +75,6 @@
   justify-content: center;
   align-self: center;
   overflow: hidden;
-}
-.home::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 120px;
-  transform: translateY(-50%);
-  height: 500px;
-  width: 500px;
-  border-radius: 50%;
-  background: #ed325f;
-  transition: 1s;
 }
 
 .content {
@@ -94,7 +87,6 @@
 }
 .content .contentBx {
   position: relative;
-  max-width: 600px;
 }
 .content .contentBx h4 {
   font-weight: 400;
@@ -119,37 +111,47 @@
   color: white;
   margin: 10px 0 20px;
   font-weight: 300;
+  max-width: 60%;
 }
 .content .contentBx a {
-  padding: 12px 20px;
+  padding: 12px 25px;
   margin-right: 10px;
   margin-bottom: 15px;
   text-transform: uppercase;
   text-decoration: none;
-  color: white;
-  background: #ed325f;
-  border-radius: 20px;
+  color: #f00a44;
+  background: #ed325f20;
+  border-radius: 10px;
   box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .content .contentBx a:hover {
-  letter-spacing: 4px;
-  background: #000;
-  color: white;
+  background: #ed325f38;
+  color: #ff0040;
 }
 
 .superman {
   position: absolute;
-  bottom: 40px;
+  top: 10px;
   z-index: 2;
-  right: 150px;
+  right: 100px;
   max-width: 500px;
+}
+.superman-circle {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background: #ed325f;
+  z-index: -1;
 }
 
 /* Social links part starts from here */
 .social-link {
   z-index: 2;
-  position: absolute;
   left: 85px;
   bottom: 100px;
   display: flex;
@@ -167,11 +169,14 @@
   margin: 0 10px;
 }
 .social-link ul li a {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
   color: #fff;
   text-align: center;
   font-size: 1.3em;
-  padding: 10px 13px;
   border: 2.7px solid white;
   border-radius: 50%;
   transition: all 0.5s;
@@ -369,7 +374,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   min-height: 100vh;
-  background: #333;
+  background: #091921;
 }
 footer {
   position: relative;
@@ -438,25 +443,25 @@ footer .wave#wave1 {
   z-index: 1000;
   opacity: 1;
   bottom: 0;
-  animation: waveAnimation 4s linear infinite;
+  animation: waveAnimation 6s ease-in-out infinite;
 }
 footer .wave#wave2 {
   z-index: 999;
   opacity: 0.5;
   bottom: 10px;
-  animation: waveAnimation_02 4s linear infinite;
+  animation: waveAnimation_02 6s ease-in-out infinite;
 }
 footer .wave#wave3 {
   z-index: 999;
   opacity: 0.2;
   bottom: 15px;
-  animation: waveAnimation 3s linear infinite;
+  animation: waveAnimation 5s ease-in-out infinite;
 }
 footer .wave#wave4 {
   z-index: 1000;
   opacity: 0.7;
   bottom: 20px;
-  animation: waveAnimation_02 3s linear infinite;
+  animation: waveAnimation_02 5s ease-in-out infinite;
 }
 @keyframes waveAnimation {
   0% {
@@ -481,16 +486,6 @@ footer .wave#wave4 {
   ::-webkit-scrollbar {
     width: 0;
   }
-  .home {
-    padding: 0 40px;
-  }
-  .home::before {
-    opacity: 0;
-  }
-  .superman {
-    right: -100px;
-    opacity: 0.3;
-  }
   .content {
     margin: 50px 0;
   }
@@ -499,6 +494,16 @@ footer .wave#wave4 {
   }
   .content .contentBx h3 {
     font-size: 1.5em;
+  }
+}
+
+@media (max-width: 1224px) {
+  .superman {
+    right: -100px;
+    opacity: 0.2;
+  }
+  .superman-circle {
+    opacity: 0;
   }
   .hero {
     right: -100px;
@@ -520,5 +525,14 @@ footer .wave#wave4 {
   }
   #progressbar {
     width: 4px;
+  }
+}
+@media (max-width: 768px) {
+  .home {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+  .skills-section {
+    padding-top: 110px;
   }
 }
