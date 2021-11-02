@@ -116,8 +116,11 @@
   .nav div.main_list ul li a {
     text-align: center;
     width: 100%;
-    font-size: 4vw;
+    font-size: 2rem;
+    display: flex;
     padding: 20px;
+    margin-left: 15px;
+    justify-content: center;
   }
   .nav div.media_button {
     display: block;
